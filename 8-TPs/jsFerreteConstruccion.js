@@ -12,7 +12,7 @@ function Rectangulo ()
     ancho=parseInt(document.getElementById("Ancho").value);
     var perimetro;
     perimetro= ((largo * 2) + (ancho * 2)) * 3;
-    alert("El perímetro es: " + perimetro);
+    alert("Se necesitarán " + perimetro + " metros de alambre.");
 }
 function Circulo () 
 {
@@ -21,10 +21,12 @@ function Circulo ()
     var radio;
     radio= parseInt(document.getElementById("Radio").value);
     perimetro= 2 * pi * radio;
-    alert("El perímetro es: " + perimetro);
+    alert("Se necesitarán " + perimetro + " metros de alambre");
 }
 function Materiales () 
 {
+    var largo;
+    var ancho;
 	var cemento;
     var cal;
     largo=parseInt(document.getElementById("Largo").value);

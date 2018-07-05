@@ -17,6 +17,9 @@ function Sumar ()
 }
 function Promedio () 
 {
+    var producto1;
+    var producto2;
+    var producto3;
 	producto1=parseInt(document.getElementById("PrecioUno").value);
     producto2=parseInt(document.getElementById("PrecioDos").value);
     producto3=parseInt(document.getElementById("PrecioTres").value);
@@ -26,6 +29,9 @@ function Promedio ()
 }
 function PrecioFinal () 
 {
+    var producto1;
+    var producto2;
+    var producto3;
 	producto1=parseInt(document.getElementById("PrecioUno").value);
     producto2=parseInt(document.getElementById("PrecioDos").value);
     producto3=parseInt(document.getElementById("PrecioTres").value);
