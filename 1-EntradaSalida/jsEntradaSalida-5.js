@@ -10,7 +10,7 @@ function mostrar()
 
     /* Datos concatenados */
     var resultado;
-    resultado= "Usted se llama" + " " + nombre + " " + "y tiene" + " " + edad + " " + "años.";
+    resultado= "Usted se llama " + nombre + " y tiene " + edad + " años.";
     alert(resultado);
 }
 

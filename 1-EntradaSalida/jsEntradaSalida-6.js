@@ -7,6 +7,6 @@ function sumar()
     var segundoNumero=parseInt(document.getElementById("numeroDos").value);
     var resultado;
     resultado = primerNumero + segundoNumero;
-    alert("La suma es" + " " + resultado);
+    alert("La suma es " + resultado);
 }
 
