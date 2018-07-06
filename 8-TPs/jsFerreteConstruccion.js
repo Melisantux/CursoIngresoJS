@@ -20,7 +20,7 @@ function Circulo ()
     pi= Math.PI;
     var radio;
     radio= parseInt(document.getElementById("Radio").value);
-    perimetro= 2 * pi * radio;
+    perimetro= (2 * pi * radio) * 3;
     alert("Se necesitarán " + perimetro + " metros de alambre");
 }
 function Materiales () 
