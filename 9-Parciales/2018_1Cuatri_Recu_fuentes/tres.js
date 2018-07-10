@@ -11,8 +11,9 @@ function mostrar()
     var preciodescuento;
     preciodescuento= precio - descuento$;
     var iva;
-    iva = (precio * 21) / 100;
-    alert("El descuento es de $" + descuento$ + ", por lo que el precio con descuento sería $" + preciodescuento + ", más un IVA de $" + iva);
+    iva = (preciodescuento * 21) / 100;
+    alert("El descuento es de $" + descuento$ + ", por lo que el precio con descuento sería $" 
+    + preciodescuento + ", más un IVA de $" + iva);
     var preciofinal;
     preciofinal= (precio - descuento$) + iva;
     document.getElementById("elPrecioFinal").value= "El precio final es $" + preciofinal;
