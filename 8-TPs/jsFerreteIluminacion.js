@@ -26,7 +26,7 @@ var marca, descuento50, descuento40, descuento30, descuento25, descuento20,
             precioFinal= precio - descuento40;
             document.getElementById("precioDescuento").value= precioFinal;
         } else {
-            if (cantidad == 5 && marca != "ArgentinaLuz") {
+            if (cantidad == 5) {
                 precio= cantidad * 35;
                 descuento30= (precio * 30) / 100;
                 precioFinal= precio - descuento30;
@@ -38,7 +38,7 @@ var marca, descuento50, descuento40, descuento30, descuento25, descuento20,
                     precioFinal= precio - descuento25;
                     document.getElementById("precioDescuento").value= precioFinal;
                 } else {
-                    if (cantidad == 4 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas")) {
+                    if (cantidad == 4) {
                         precio= cantidad * 35;
                         descuento20= (precio * 20) / 100;
                         precioFinal= precio - descuento20;
@@ -56,7 +56,7 @@ var marca, descuento50, descuento40, descuento30, descuento25, descuento20,
                                 precioFinal= precio - descuento10;
                                 document.getElementById("precioDescuento").value= precioFinal;
                             } else {
-                                if (cantidad == 3 && (marca != "ArgentinaLuz" && marca != "FelipeLamparas" )) {
+                                if (cantidad == 3) {
                                     precio= cantidad * 35;
                                     descuento5= (precio * 5) / 100;
                                     precioFinal= precio - descuento5;
