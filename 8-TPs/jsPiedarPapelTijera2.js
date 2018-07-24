@@ -22,10 +22,10 @@ function papel()
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	
+	//agregar al final mostrarResultado()//
 }//FIN DE LA FUNCIÓN
 
 function mostrarResultado()
 {
-
+	//Poner ID acà//
 }

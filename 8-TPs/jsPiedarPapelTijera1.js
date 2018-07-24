@@ -9,25 +9,16 @@ var eleccionMaquina;
 function comenzar()
 {
     eleccionMaquina= Math.floor(Math.random()* (4-1) + 1);
-    if (eleccionMaquina == 1) {
-        eleccionMaquina = "piedra";
-    } else {
-        if (eleccionMaquina == 2) {
-            eleccionMaquina = "papel";
-        } else {
-            eleccionMaquina = "tijera";
-        }
-    }
     console.log(eleccionMaquina);
 
 
 }//FIN DE LA FUNCIÓN
 function piedra()
 {
-    if (eleccionMaquina == "piedra") {
+    if (eleccionMaquina == 1) {
         alert("Empató.");     
     } else {
-        if (eleccionMaquina == "papel") {
+        if (eleccionMaquina == 2) {
             alert("Perdió.");
         } else {
             alert("Ganó.");
@@ -38,12 +29,20 @@ function piedra()
 }//FIN DE LA FUNCIÓN
 function papel()
 {
-
+    if(eleccionMaquina==1) {
+        alert("Ganó.");
+    } else {
+        if (eleccionMaquina==2) {
+            alert("Empató.");
+        } else {
+            alert("Perdió.");
+        }
+    }
+    comenzar();
 
 }//FIN DE LA FUNCIÓN
 function tijera()
 {
-	var tijera;
-    tijera = 3;
+	
 
 }//FIN DE LA FUNCIÓN
