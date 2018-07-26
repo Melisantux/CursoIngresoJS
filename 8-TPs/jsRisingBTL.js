@@ -56,13 +56,13 @@ function ComenzarIngreso ()
     {
         sueldo=parseInt(prompt("Por favor, ingrese un sueldo bruto mayor a $8000"));
     }
-    document.getElementById("Sueldo").value=sueldo;
+    document.getElementById("Sueldo").value="$" + sueldo;
     legajo=parseInt(prompt("Ingrese su número de legajo"));
     while(legajo < 1000 || legajo >9999)
     {
         legajo= parseInt(prompt("Ingrese su número de legajo de cuatro cifras y sin ceros a la izquierda"));
     }
-    document.getElementById("Legajo").value=legajo;
+    document.getElementById("Legajo").value="#" + legajo;
     nacionalidad=prompt("Ingrese su nacionalidad utilizando A para argentinos, E para extranjeros y N para nacionalizados");
     while (nacionalidad != "A" && nacionalidad != "E" && nacionalidad != "N")
     {
