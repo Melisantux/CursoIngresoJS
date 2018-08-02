@@ -27,7 +27,7 @@ function mostrar()
             sexo= sexo.toLocaleLowerCase();
         }
         acumulador= acumulador + nota;
-        while (bandera1) {
+        if (bandera1) {
             bandera1=false;
             minimo= nota;
         }
@@ -37,10 +37,6 @@ function mostrar()
         }
         if (sexo == "m" && edad > 18 && nota >=6) {
             contadorM++;
-        }
-        while(bandera2) {
-            bandera2=false;
-            edadMinima=edad;
         }
         if (edad < edadMinima) {
             notaEdad=nota;
