@@ -1,83 +1,50 @@
 function mostrar()
 {
-    var nombre, sexo, edad, contador, contadorM, contadorF,mayores, menores, mMayores, minimo, maximo, bandera, 
-    promedio, nombreMayor, nombreMenor, sexoMayorM, nombreMayorF, acumuladorM, acumuladorF, promedioF, promedioM,
-    nombreMaximo, nombreMinimo, sexoMaximo, nombreMaximoF;
-    contador = 0;
-    contadorF=0;
-    contadorM=0;
-    mayores=0;
-    menores=0;
-    mMayores=0;
-    bandera=true;
+    var notas, sexo, alumnos, promedio, minimo, sexoMinimo;
+    contador=0;
     acumulador=0;
-    acumuladorM=0;
-    acumuladorF=0;
-    while (contador < 4)
-    {
+    bandera=true;
+    contadorM=0;
+    while (contador < 5) {
         contador++;
-        nombre= prompt("Ingrese su nombre.");
-        sexo = prompt("Indique su sexo utilizando M para masculino ó F para femenino.");
-        sexo= sexo.toLocaleUpperCase();
-    while(sexo != "F" && sexo != "M")
-    {
-        sexo=prompt("Error, indique su sexo utlizando M para masculino ó F para femenino");
-        sexo= sexo.toLocaleUpperCase();
+        notas= prompt("Ingrese una nota.");
+        notas= parseInt(notas);
+        acumulador= acumulador + notas;
+    while (notas < 0 || notas > 10 || isNaN(notas)) {
+        notas = prompt("Error. Ingrese una nota entre 0 y 10.");
+        notas= parseInt(notas);
+        acumulador= acumulador + notas;
     }
-        edad= prompt("Ingrese su edad.")
-        edad = parseInt(edad);
-    while (edad > 100 || edad < 1 || isNaN(edad))
-    {
-        edad = prompt("Ingrese una edad válida");
-        edad= parseInt(edad);
+        sexo = prompt("Ingrese el sexo");
+        sexo= sexo.toLocaleLowerCase();
+    while (sexo != "f" && sexo != "m") {
+        sexo= prompt("Error, indique el sexo utilizando m para masculino y f para femenino.");
+        sexo= sexo.toLocaleLowerCase();
     }
-    if (sexo=="M" && edad >=18) {
+    if (sexo=="m" && notas >= 6) {
         contadorM++;
-        mayores++;
-        mMayores++;
-        acumuladorM= acumuladorM + edad;
-    } else {
-        if (sexo== "M") {
-            contadorM++;
-            menores++;
-            acumuladorM= acumuladorM + edad;
-        } else {
-            if (edad >=18) {
-                contadorF++;
-                mayores++;
-                acumuladorF= acumuladorF + edad;
-            } else {
-                contadorF++;
-                menores++;
-                acumuladorF= acumuladorF + edad;
-            }
-        }
     }
     if (bandera) {
         bandera=false;
-        maximo=edad;
-        minimo=edad;
+        minimo=notas;
     } else {
-        if(edad>maximo) {
-            maximo=edad;
-            nombreMaximo=nombre;
-            sexoMaximo= sexo;
-            console.log(sexoMaximo, nombreMaximo);
-        } else {
-            minimo=edad;
+        if (notas < minimo) {
+            minimo=notas;
+            sexoMinimo= sexo;
         }
     }
-    promedioF= (acumuladorF/contadorF);
-    promedioF= parseInt(promedioF);
-    promedioM= (acumuladorM/contadorM);
-    promedioM= parseInt(promedioM);
-    promedio=(acumuladorM + acumuladorF ) / contador;
-    promedio= parseInt(promedio);
+     switch(sexo) {
+        case "f":
+            sexo= "femenino";
+        break;
+        default:
+            sexo="masculino";
     }
-    document.write("Cantidad de mujeres= " + contadorF + "<br>" + "Cantidad de hombres= " + contadorM + "<br>" +
-    "Cantidad de mayores de edad= " + mayores + "<br>" + "Cantidad de menores de edad=" + menores + "<br>" +
-    "Cantidad de hombres mayores de edad= " + mMayores + "<br>" + "La edad más baja= " + minimo + "<br>" +
-    "La edad más alta= " + maximo + "<br>");
-    document.write("Promedio de edad de las mujeres= " + promedioF + "<br>" + "Promedio de edad de hombres= " + 
-    promedioM + "<br>" + "Promedio de edad total= " + promedio);
+    }
+
+    promedio = acumulador/contador;
+    promedio= parseInt(promedio);
+    alert("El promedio de las notas es: " + promedio);
+    alert("La nota más baja fue igual a " + minimo + " y fue de un alumno de sexo " + sexo);
+    alert(contadorM + " varones obtuvieron una nota mayor o igual a 6.")
 }

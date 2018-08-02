@@ -11,7 +11,7 @@ function mostrar()
             numeroPar=i;
             console.log(numeroPar);
             contadorPares++;
-            //console.log(contadorPares);
+            console.log(contadorPares);
         }
     }
 
